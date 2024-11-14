@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pro Subscription Box Service</title>
+  <style>
+    /* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #58e1d6;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #333;
+  padding: 10px 20px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.navbar .nav-links li {
+  margin: 0 15px;
+}
+
+.navbar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+  background: url('hero-image.jpg') center/cover no-repeat;
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.5em;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+.hero-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff4500;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Plans Section */
+.plans {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.plans h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.plan-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.plan-box {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.plan-box h3 {
+  color: #333;
+}
+
+.plan-box .price {
+  font-size: 1.5em;
+  color: #ff4500;
+  margin: 10px 0;
+}
+
+.plan-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.plan-box ul li {
+  margin: 10px 0;
+}
+
+.subscribe-btn {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Contact Section */
+.contact {
+  padding: 40px 20px;
+  background: #333;
+  color: #fff;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+#contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#contact-form label {
+  display: block;
+  margin-top: 10px;
+}
+
+#contact-form input, #contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+.form-btn {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background-color: #ff4500;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+  </style>
+  
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <h1 class="logo">SubscriptionBoxPro</h1>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#plans">Plans</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="home">
+    <h2>Discover New Products Every Month</h2>
+    <p>Sign up for curated boxes delivered right to your door. Select a plan that fits your needs.</p>
+    <a href="#plans" class="hero-btn">Explore Plans</a>
+  </header>
+
+  <!-- Subscription Plans Section -->
+  <section class="plans" id="plans">
+    <h2>Our Subscription Plans</h2>
+    <div class="plan-container">
+      <!-- Basic Plan -->
+      <div class="plan-box">
+        <h3>Basic</h3>
+        <p class="price">$10/month</p>
+        <ul>
+          <li>3 curated items</li>
+          <li>Free shipping</li>
+          <li>Monthly surprises</li>
+        </ul>
+        <button class="subscribe-btn" onclick="selectPlan('Basic')">Subscribe</button>
+      </div>
+      
+      <!-- Premium Plan -->
+      <div class="plan-box">
+        <h3>Premium</h3>
+        <p class="price">$20/month</p>
+        <ul>
+          <li>5 curated items</li>
+          <li>Exclusive content</li>
+          <li>Free shipping</li>
+        </ul>
+        <button class="subscribe-btn" onclick="selectPlan('Premium')">Subscribe</button>
+      </div>
+
+      <!-- Ultimate Plan -->
+      <div class="plan-box">
+        <h3>Ultimate</h3>
+        <p class="price">$30/month</p>
+        <ul>
+          <li>8 premium items</li>
+          <li>Exclusive content & offers</li>
+          <li>Free shipping</li>
+        </ul>
+        <button class="subscribe-btn" onclick="selectPlan('Ultimate')">Subscribe</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit" class="form-btn">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 SubscriptionBoxPro. All rights reserved.</p>
+  </footer>
+
+  <script src="wscript.js"></script>
+</body>
+</html>
